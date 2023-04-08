@@ -1,15 +1,29 @@
-import './globals.css';
+import { PropsWithChildren } from 'react';
+import { ThemeProvider } from 'presentation/context/Theme';
+import Head from 'next/head';
+import ContextComposer from 'presentation/context/ContextComposer';
+import Layout from 'presentation/component/layout';
 
-type PropsT = {
-    children: React.ReactNode;
-};
+const APP_PROVIDERS = [ThemeProvider];
 
-export default function RootLayout(props: PropsT) {
+export default function RootLayout(props: PropsWithChildren) {
     const { children } = props;
 
     return (
         <html lang="en">
-            <body>{children}</body>
+            <Head>
+                <meta charSet="UTF-8" />
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1, maximum-scale=5"
+                />
+                <meta name="format-detection" content="telephone=no" />
+            </Head>
+            <body>
+                <ContextComposer components={APP_PROVIDERS}>
+                    <Layout>{children}</Layout>
+                </ContextComposer>
+            </body>
         </html>
     );
 }

@@ -1,3 +1,86 @@
 {
-  "extends": "next/core-web-vitals"
+    "extends": [
+        "airbnb",
+        "airbnb-typescript",
+        "prettier",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@next/next/recommended"
+    ],
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint", "import", "jsx-a11y", "react"],
+    "parserOptions": {
+        "project": "./tsconfig.json",
+        "tsconfigRootDir": "."
+    },
+    "settings": {
+        "import/parsers": {
+            "@typescript-eslint/parser": [".ts", ".tsx"]
+        },
+        "import/order": [
+            "error",
+            {
+                "groups": [
+                    "index",
+                    "sibling",
+                    "parent",
+                    "internal",
+                    "external",
+                    "builtin",
+                    "object",
+                    "type"
+                ]
+            }
+        ],
+        "import/resolver": {
+            "typescript": {
+                "alwaysTryTypes": true,
+                "project": "tsconfig.json"
+            }
+        }
+    },
+    "rules": {
+        "no-plusplus": "off",
+        "import/no-unresolved": "off",
+        "react/require-default-props": "off",
+        "react/no-unused-prop-types": "warn",
+        "react/function-component-definition": "off",
+        "@typescript-eslint/no-unused-vars": "warn",
+        "import/no-cycle": [
+            "warn",
+            {
+                "maxDepth": 2
+            }
+        ],
+        "no-empty": [
+            "error",
+            {
+                "allowEmptyCatch": true
+            }
+        ],
+        "spaced-comment": "warn",
+        "no-unused-vars": "warn",
+        "no-underscore-dangle": "off",
+        "consistent-return": "off",
+        "react/state-in-constructor": ["error", "never"],
+        "react/jsx-props-no-spreading": [
+            "error",
+            {
+                "html": "enforce",
+                "custom": "ignore",
+                "explicitSpread": "enforce",
+                "exceptions": []
+            }
+        ],
+        "react/react-in-jsx-scope": "off",
+        "react/prop-types": "off",
+        "max-classes-per-file": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "react/static-property-placement": "off",
+        "@typescript-eslint/no-redeclare": "off",
+        "arrow-body-style": "off"
+    }
 }
