@@ -13,6 +13,7 @@
         "lint": "next lint"
     },
     "dependencies": {
+        "@bit/taptima.common.svg-sprite-icon": "^2.0.5",
         "@emotion/react": "^11.10.6",
         "@emotion/styled": "^11.10.6",
         "@types/node": "18.15.11",
@@ -36,6 +37,7 @@
         "eslint-plugin-import": "^2.27.5",
         "eslint-plugin-jsx-a11y": "^6.7.1",
         "eslint-plugin-react": "^7.32.2",
-        "prettier": "^2.8.7"
+        "prettier": "^2.8.7",
+        "svg-sprite-loader": "^6.0.11"
     }
 }
