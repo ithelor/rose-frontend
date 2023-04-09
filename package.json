@@ -10,7 +10,8 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "next lint",
+        "svg:optimize": "svgo -f src/presentation/svg --exclude \".*\\.raw\\.svg\""
     },
     "dependencies": {
         "@bit/taptima.common.svg-sprite-icon": "^2.0.5",
@@ -39,6 +40,7 @@
         "eslint-plugin-jsx-a11y": "^6.7.1",
         "eslint-plugin-react": "^7.32.2",
         "prettier": "^2.8.7",
-        "svg-sprite-loader": "^6.0.11"
+        "svg-sprite-loader": "^6.0.11",
+        "svgo": "^3.0.2"
     }
 }
