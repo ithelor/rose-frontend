@@ -22,6 +22,8 @@ export const BaseIcon = styled(SvgSpriteIcon, {
     shouldForwardProp: (prop) => !['color', 'rotate', 'size'].includes(prop),
 })<SvgIconPropsT>`
     fill: ${({ theme, color }) => (color ? theme.colors[color] : 'currentColor')};
+    transition: fill ${({ theme }) => theme.transition.fast},
+        transition ${({ theme }) => theme.transition.fast};
 
     ${({ rotate }) => rotate && rotateIconCss(rotate)};
     ${({ size }) => size && sizeIconCss(size)};

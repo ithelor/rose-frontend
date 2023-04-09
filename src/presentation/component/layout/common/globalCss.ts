@@ -1,6 +1,11 @@
-import { SerializedStyles, css } from '@emotion/react';
+import { css, SerializedStyles } from '@emotion/react';
 import normalize from 'polished/lib/mixins/normalize';
 import { ThemeT } from 'presentation/context/Theme';
+import {
+    FAST_TRANSITION_TIME_IN_MS,
+    NORMAL_TRANSITION_TIME_IN_MS,
+    SLOW_TRANSITION_TIME_IN_MS,
+} from 'presentation/constant/style';
 import fontCss from './fontCss';
 
 const globalCss = (theme: ThemeT): SerializedStyles => css`
@@ -10,6 +15,9 @@ const globalCss = (theme: ThemeT): SerializedStyles => css`
     html,
     body {
         --container-gutter: 24px;
+        --transition-fast: ${FAST_TRANSITION_TIME_IN_MS}ms;
+        --transition-normal: ${NORMAL_TRANSITION_TIME_IN_MS}ms;
+        --transition-slow: ${SLOW_TRANSITION_TIME_IN_MS}ms;
 
         margin: 0;
         padding: 0;
