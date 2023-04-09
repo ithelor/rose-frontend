@@ -1,9 +1,9 @@
-import bell from 'presentation/svg/bell.svg';
-import heart from 'presentation/svg/heart.svg';
-import searchRefraction from 'presentation/svg/search-refraction.svg';
-import settings from 'presentation/svg/settings.svg';
-import star from 'presentation/svg/star.svg';
-import user from 'presentation/svg/user.svg';
+import bell from 'presentation/svg/bell.raw.svg';
+import heart from 'presentation/svg/heart.raw.svg';
+import searchRefraction from 'presentation/svg/search-refraction.raw.svg';
+import settings from 'presentation/svg/settings.raw.svg';
+import star from 'presentation/svg/star.raw.svg';
+import user from 'presentation/svg/user.raw.svg';
 import { PropsT as IconPropsT } from '@bit/taptima.common.svg-sprite-icon';
 import type { IconNameT } from './types';
 
