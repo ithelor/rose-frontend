@@ -5,7 +5,7 @@ import { MAP_ICON_NAME_TO_SVG } from './content';
 
 export type { IconNameT };
 
-type IconPropsT = HTMLAttributes<HTMLElement> &
+export type IconPropsT = HTMLAttributes<HTMLElement> &
     BaseIconPropsT & {
         icon: IconNameT;
     };
