@@ -52,5 +52,10 @@ export type ThemeT = {
         family: FontFamilyT;
         weight: FontWeightT;
     };
+    transition: {
+        slow: string;
+        normal: string;
+        fast: string;
+    };
     zIndex: ZIndexT;
 };

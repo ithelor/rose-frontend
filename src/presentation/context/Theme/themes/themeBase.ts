@@ -12,6 +12,11 @@ const themeBase: Omit<ThemeT, 'type' | 'colors'> = {
             bold: '700',
         },
     },
+    transition: {
+        slow: 'var(--transition-slow)',
+        normal: 'var(--transition-normal)',
+        fast: 'var(--transition-fast)',
+    },
     zIndex: {
         dropdown: 1000,
         sticky: 1020,
