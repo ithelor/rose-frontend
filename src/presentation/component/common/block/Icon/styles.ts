@@ -23,7 +23,7 @@ export const BaseIcon = styled(SvgSpriteIcon, {
 })<SvgIconPropsT>`
     fill: ${({ theme, color }) => (color ? theme.colors[color] : 'currentColor')};
     transition: fill ${({ theme }) => theme.transition.fast},
-        transition ${({ theme }) => theme.transition.fast};
+        transform ${({ theme }) => theme.transition.fast};
 
     ${({ rotate }) => rotate && rotateIconCss(rotate)};
     ${({ size }) => size && sizeIconCss(size)};

@@ -27,6 +27,12 @@ const globalCss = (theme: ThemeT): SerializedStyles => css`
         line-height: 1.2;
         -webkit-font-smoothing: antialiased;
         -webkit-overflow-scrolling: touch;
+
+        @media (prefers-reduced-motion: reduce) {
+            --transition-fast: 0ms;
+            --transition-normal: 0ms;
+            --transition-slow: 0ms;
+        }
     }
 
     *,

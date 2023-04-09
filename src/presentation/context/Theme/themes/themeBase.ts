@@ -13,9 +13,9 @@ const themeBase: Omit<ThemeT, 'type' | 'colors'> = {
         },
     },
     transition: {
-        slow: 'var(--transition-slow)',
-        normal: 'var(--transition-normal)',
         fast: 'var(--transition-fast)',
+        normal: 'var(--transition-normal)',
+        slow: 'var(--transition-slow)',
     },
     zIndex: {
         dropdown: 1000,
