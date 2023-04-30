@@ -1,5 +1,5 @@
-import type { IconNameT } from 'presentation/component/common/block/Icon';
 import { FAVORITES, NOTIFICATIONS, SEARCH, SETTINGS, USER } from 'constant/route';
+import type { IconNameT } from 'presentation/component/common/block/Icon';
 
 type SidebarItemT = {
     icon: IconNameT;

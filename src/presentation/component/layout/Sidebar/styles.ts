@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 export const Wrapper = styled.div`
     height: 100%;
     padding: 32px;
+    grid-row: span 2;
     border-radius: 24px;
     color: ${({ theme }) => theme.colors.white};
     background-color: ${({ theme }) => theme.colors.gray900};

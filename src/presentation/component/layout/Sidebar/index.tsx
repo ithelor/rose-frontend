@@ -8,7 +8,7 @@ const ICON_PROPS: Partial<IconPropsT> = {
     color: 'white',
 };
 
-const Component: FC<PropsWithChildren> = () => {
+const Sidebar: FC<PropsWithChildren> = () => {
     const { topList, bottomList } = SIDEBAR_CONTENT;
 
     return (
@@ -17,7 +17,7 @@ const Component: FC<PropsWithChildren> = () => {
                 <List>
                     {topList.map(({ icon, url }) => (
                         <Item key={url}>
-                            <Link href={url}>
+                            <Link href={url} prefetch={false}>
                                 <Icon icon={icon} {...ICON_PROPS} />
                             </Link>
                         </Item>
@@ -26,7 +26,7 @@ const Component: FC<PropsWithChildren> = () => {
                 <List>
                     {bottomList.map(({ icon, url }) => (
                         <Item key={url}>
-                            <Link href={url}>
+                            <Link href={url} prefetch={false}>
                                 <Icon icon={icon} {...ICON_PROPS} />
                             </Link>
                         </Item>
@@ -37,4 +37,4 @@ const Component: FC<PropsWithChildren> = () => {
     );
 };
 
-export default Component;
+export default Sidebar;
