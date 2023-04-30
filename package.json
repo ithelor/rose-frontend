@@ -17,6 +17,7 @@
         "@bit/taptima.common.svg-sprite-icon": "^2.0.5",
         "@emotion/react": "^11.10.6",
         "@emotion/styled": "^11.10.6",
+        "@mui/material": "^5.12.2",
         "@types/node": "18.15.11",
         "@types/react": "18.0.32",
         "@types/react-dom": "18.0.11",

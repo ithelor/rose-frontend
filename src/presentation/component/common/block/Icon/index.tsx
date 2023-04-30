@@ -1,7 +1,7 @@
 import { HTMLAttributes, memo } from 'react';
-import { BaseIcon, SvgIconPropsT as BaseIconPropsT } from './styles';
-import type { IconNameT } from './types';
 import { MAP_ICON_NAME_TO_SVG } from './content';
+import { IconNameT } from './types';
+import { BaseIcon, SvgIconPropsT as BaseIconPropsT } from './styles';
 
 export type { IconNameT };
 

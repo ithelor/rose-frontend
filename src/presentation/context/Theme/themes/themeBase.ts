@@ -1,3 +1,8 @@
+import {
+    FAST_TRANSITION_TIME_IN_MS,
+    NORMAL_TRANSITION_TIME_IN_MS,
+    SLOW_TRANSITION_TIME_IN_MS,
+} from 'presentation/constant/style';
 import type { ThemeT } from 'presentation/context/Theme/types';
 
 const themeBase: Omit<ThemeT, 'type' | 'colors'> = {
@@ -13,9 +18,9 @@ const themeBase: Omit<ThemeT, 'type' | 'colors'> = {
         },
     },
     transition: {
-        fast: 'var(--transition-fast)',
-        normal: 'var(--transition-normal)',
-        slow: 'var(--transition-slow)',
+        fast: `${FAST_TRANSITION_TIME_IN_MS}ms`,
+        normal: `${NORMAL_TRANSITION_TIME_IN_MS}ms`,
+        slow: `${SLOW_TRANSITION_TIME_IN_MS}ms`,
     },
     zIndex: {
         dropdown: 1000,
