@@ -1,9 +1,11 @@
 'use client';
 
-import { Global } from '@emotion/react';
 import { FC, PropsWithChildren } from 'react';
-import { LayoutWrapper, Main } from './styles';
+import { Global } from '@emotion/react';
+import Sidebar from './Sidebar';
+import Header from './Header';
 import globalCss from './common/globalCss';
+import { Content, LayoutWrapper, Main } from './styles';
 
 const Layout: FC<PropsWithChildren> = (props) => {
     const { children } = props;
@@ -11,9 +13,11 @@ const Layout: FC<PropsWithChildren> = (props) => {
     return (
         <>
             <LayoutWrapper>
-                {/* <Header /> */}
-                <Main>{children}</Main>
-                {/* <Footer /> */}
+                <Sidebar />
+                <Content>
+                    <Header />
+                    <Main>{children}</Main>
+                </Content>
             </LayoutWrapper>
             <Global styles={globalCss} />
         </>

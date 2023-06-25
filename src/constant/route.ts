@@ -1,0 +1,10 @@
+export const HOME = '/';
+export const SEARCH = '/search';
+export const FAVORITES = '/favorites';
+export const USER = '/user';
+export const NOTIFICATIONS = '/notifications';
+export const SETTINGS = '/settings';
+export const DASHBOARD = '/dashboard';
+export const STUDY = '/study';
+export const DICTIONARY = '/dictionary';
+export const CONTENT = '/content';

@@ -10,19 +10,22 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "next lint",
+        "svg:optimize": "svgo -f src/presentation/svg --exclude \".*\\.raw\\.svg\""
     },
     "dependencies": {
         "@bit/taptima.common.svg-sprite-icon": "^2.0.5",
         "@emotion/react": "^11.10.6",
         "@emotion/styled": "^11.10.6",
+        "@mui/material": "^5.12.2",
         "@types/node": "18.15.11",
         "@types/react": "18.0.32",
         "@types/react-dom": "18.0.11",
-        "next": "13.2.4",
+        "eslint-config-next": "^13.3.0",
+        "next": "^13.3.0",
         "polished": "^4.2.2",
-        "react": "18.2.0",
-        "react-dom": "18.2.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
         "typescript": "5.0.3"
     },
     "devDependencies": {
@@ -38,6 +41,7 @@
         "eslint-plugin-jsx-a11y": "^6.7.1",
         "eslint-plugin-react": "^7.32.2",
         "prettier": "^2.8.7",
-        "svg-sprite-loader": "^6.0.11"
+        "svg-sprite-loader": "^6.0.11",
+        "svgo": "^3.0.2"
     }
 }

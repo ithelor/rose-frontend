@@ -50,6 +50,70 @@
         "react/no-unused-prop-types": "warn",
         "react/function-component-definition": "off",
         "@typescript-eslint/no-unused-vars": "warn",
+        "import/order": [
+            "warn",
+            {
+                "groups": [
+                    // "type" and "object" commonly unused in code, uses only as divide anchor in "pathGroups"
+                    "builtin", // import path from 'path'
+                    "external", // import _ from 'lodash'
+                    "type", // import type { Foo } from 'foo',
+                    "object", // import log = console.log,
+                    "internal", // import foo from "src/foo",
+                    "parent", // import paerntFoo from "../foo",
+                    "sibling", // import {Block} from "./styles",
+                    "index"
+                ],
+                "pathGroups": [
+                    // Sorts by record order in array, but "group" and "position" have bigger priority
+                    // so keep order consistant with "group" and "position" values
+                    { "pattern": "constant/**", "group": "type", "position": "before" },
+                    { "pattern": "helper/**", "group": "object", "position": "after" },
+                    { "pattern": "util/**", "group": "object", "position": "after" },
+                    {
+                        "pattern": "presentation/context/**",
+                        "group": "internal",
+                        "position": "after"
+                    },
+                    {
+                        "pattern": "presentation/type/**",
+                        "group": "internal",
+                        "position": "after"
+                    },
+                    {
+                        "pattern": "presentation/hook/**",
+                        "group": "internal",
+                        "position": "after"
+                    },
+                    {
+                        "pattern": "presentation/component/layout/**",
+                        "group": "internal",
+                        "position": "after"
+                    },
+                    {
+                        "pattern": "presentation/component/common/**",
+                        "group": "internal",
+                        "position": "after"
+                    },
+                    {
+                        "pattern": "presentation/component/feature/**",
+                        "group": "internal",
+                        "position": "after"
+                    },
+                    {
+                        "pattern": "presentation/component/page/**",
+                        "group": "internal",
+                        "position": "after"
+                    },
+                    {
+                        "pattern": "presentation/mediaquery",
+                        "group": "sibling",
+                        "position": "before"
+                    },
+                    { "pattern": "./styles", "group": "sibling", "position": "after" }
+                ]
+            }
+        ],
         "import/no-cycle": [
             "warn",
             {
