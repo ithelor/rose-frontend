@@ -22,7 +22,7 @@
             "@typescript-eslint/parser": [".ts", ".tsx"]
         },
         "import/order": [
-            "error",
+            "warn",
             {
                 "groups": [
                     "index",
@@ -46,6 +46,7 @@
     "rules": {
         "no-plusplus": "off",
         "import/no-unresolved": "off",
+        "import/prefer-default-export": "off",
         "react/require-default-props": "off",
         "react/no-unused-prop-types": "warn",
         "react/function-component-definition": "off",
@@ -64,6 +65,12 @@
         ],
         "spaced-comment": "warn",
         "no-unused-vars": "warn",
+        "import/order": [
+            "warn",
+            {
+                "pathGroups": [{ "pattern": "./styles", "group": "sibling", "position": "after" }]
+            }
+        ],
         "no-underscore-dangle": "off",
         "consistent-return": "off",
         "react/state-in-constructor": ["error", "never"],

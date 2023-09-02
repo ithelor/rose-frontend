@@ -1,19 +1,21 @@
-import { HTMLAttributes, memo } from 'react';
-import { BaseIcon, SvgIconPropsT as BaseIconPropsT } from './styles';
-import type { IconNameT } from './types';
-import { MAP_ICON_NAME_TO_SVG } from './content';
+import { FC } from 'react';
+import { IconBaseProps, IconType } from 'react-icons';
 
-export type { IconNameT };
-
-type IconPropsT = HTMLAttributes<HTMLElement> &
-    BaseIconPropsT & {
-        icon: IconNameT;
+type IconPropsT = IconBaseProps &
+    ClassName & {
+        icon: IconType;
     };
 
-const Icon = memo<IconPropsT>((props) => {
-    const { icon, size = 24, ...restProps } = props;
+const Icon: FC<IconPropsT> = (props) => {
+    const { icon: IconComponent, className, ...restProps } = props;
 
-    return <BaseIcon icon={MAP_ICON_NAME_TO_SVG[icon]} size={size} {...restProps} />;
-});
+    return (
+        <IconComponent
+            size={24}
+            className={`duration-fast transition-fill ${className ?? ''}`}
+            {...restProps}
+        />
+    );
+};
 
 export default Icon;
