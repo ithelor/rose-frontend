@@ -13,22 +13,22 @@
         "lint": "next lint"
     },
     "dependencies": {
-        "@bit/taptima.common.svg-sprite-icon": "^2.0.5",
-        "@emotion/react": "^11.10.6",
-        "@emotion/styled": "^11.10.6",
         "@types/node": "18.15.11",
         "@types/react": "18.0.32",
         "@types/react-dom": "18.0.11",
-        "next": "13.2.4",
+        "eslint-config-next": "^13.4.19",
+        "next": "^13.4.19",
         "polished": "^4.2.2",
-        "react": "18.2.0",
-        "react-dom": "18.2.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-icons": "^4.10.1",
         "typescript": "5.0.3"
     },
     "devDependencies": {
         "@next/eslint-plugin-next": "^13.3.0",
         "@typescript-eslint/eslint-plugin": "^5.57.1",
         "@typescript-eslint/parser": "^5.57.1",
+        "autoprefixer": "^10.4.15",
         "eslint": "^8.38.0",
         "eslint-config-airbnb": "^19.0.4",
         "eslint-config-airbnb-typescript": "^17.0.0",
@@ -37,7 +37,9 @@
         "eslint-plugin-import": "^2.27.5",
         "eslint-plugin-jsx-a11y": "^6.7.1",
         "eslint-plugin-react": "^7.32.2",
-        "prettier": "^2.8.7",
-        "svg-sprite-loader": "^6.0.11"
+        "postcss": "^8.4.29",
+        "prettier": "^3.0.3",
+        "prettier-plugin-tailwindcss": "^0.5.4",
+        "tailwindcss": "^3.3.3"
     }
 }

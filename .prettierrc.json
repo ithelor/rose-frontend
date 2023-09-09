@@ -10,5 +10,6 @@
     "arrowParens": "always",
     "requirePragma": false,
     "insertPragma": false,
-    "quoteProps": "preserve"
+    "quoteProps": "preserve",
+    "plugins": ["prettier-plugin-tailwindcss"]
 }

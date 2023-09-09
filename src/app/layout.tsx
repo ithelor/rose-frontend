@@ -1,9 +1,12 @@
-import { PropsWithChildren } from 'react';
-import { ThemeProvider } from 'presentation/context/Theme';
+import { FC, PropsWithChildren } from 'react';
+import { Montserrat } from 'next/font/google';
 import ContextComposer from 'presentation/context/ContextComposer';
 import Layout from 'presentation/component/layout';
+import './globals.css';
 
-const APP_PROVIDERS = [ThemeProvider];
+const APP_PROVIDERS: FC[] = [];
+
+const montserrat = Montserrat({ subsets: ['latin'] });
 
 export const metadata = {
     title: 'Create Next App',
@@ -14,7 +17,7 @@ export default function RootLayout(props: PropsWithChildren) {
     const { children } = props;
 
     return (
-        <html lang="en">
+        <html lang="en" className={montserrat.className}>
             <body>
                 <ContextComposer components={APP_PROVIDERS}>
                     <Layout>{children}</Layout>
