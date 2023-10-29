@@ -1,14 +1,16 @@
+'use client';
+
 import { FC, PropsWithChildren } from 'react';
+import Header from './Header';
 
 const Layout: FC<PropsWithChildren> = (props) => {
     const { children } = props;
 
     return (
-        <div>
-            {/* <Header /> */}
-            <main className="h-full">{children}</main>
-            {/* <Footer /> */}
-        </div>
+        <main>
+            <Header />
+            <div>{children}</div>
+        </main>
     );
 };
 
