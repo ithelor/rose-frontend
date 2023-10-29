@@ -51,6 +51,61 @@
         "react/no-unused-prop-types": "warn",
         "react/function-component-definition": "off",
         "@typescript-eslint/no-unused-vars": "warn",
+        "import/order": [
+            "warn",
+            {
+                "groups": [
+                    "builtin", // import fs from 'fs'
+                    "external", // import _ from 'lodash'
+                    "type", // import type { Foo } from 'foo'
+                    "object", // import log = console.log
+                    "internal", // import foo from 'src/foo'
+                    "parent", // import foo from '../foo'
+                    "sibling", // import bar from './bar'
+                    "index" // import main from './'
+                ],
+                "pathGroups": [
+                    { "pattern": "constant/**", "group": "type", "position": "before" },
+                    { "pattern": "domain/entity/**", "group": "type", "position": "before" },
+                    {
+                        "pattern": "presentation/context/**",
+                        "group": "internal",
+                        "position": "after"
+                    },
+                    {
+                        "pattern": "presentation/type/**",
+                        "group": "internal",
+                        "position": "after"
+                    },
+                    {
+                        "pattern": "presentation/hook/**",
+                        "group": "internal",
+                        "position": "after"
+                    },
+                    {
+                        "pattern": "presentation/component/layout/**",
+                        "group": "internal",
+                        "position": "after"
+                    },
+                    {
+                        "pattern": "presentation/component/common/**",
+                        "group": "internal",
+                        "position": "after"
+                    },
+                    {
+                        "pattern": "presentation/component/feature/**",
+                        "group": "internal",
+                        "position": "after"
+                    },
+                    {
+                        "pattern": "presentation/component/page/**",
+                        "group": "internal",
+                        "position": "after"
+                    },
+                    { "pattern": "./content", "group": "sibling", "position": "after" }
+                ]
+            }
+        ],
         "import/no-cycle": [
             "warn",
             {
@@ -65,12 +120,6 @@
         ],
         "spaced-comment": "warn",
         "no-unused-vars": "warn",
-        "import/order": [
-            "warn",
-            {
-                "pathGroups": [{ "pattern": "./styles", "group": "sibling", "position": "after" }]
-            }
-        ],
         "no-underscore-dangle": "off",
         "consistent-return": "off",
         "react/state-in-constructor": ["error", "never"],
