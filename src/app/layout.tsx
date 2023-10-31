@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react';
 import { Montserrat } from 'next/font/google';
-import Layout from 'presentation/component/layout';
 import './globals.css';
+import Header from 'presentation/component/layout/Header';
 
 const montserrat = Montserrat({ subsets: ['latin'] });
 
@@ -16,7 +16,10 @@ export default function RootLayout(props: PropsWithChildren) {
     return (
         <html lang="en" className={montserrat.className}>
             <body>
-                <Layout>{children}</Layout>
+                <main className="flex min-h-screen flex-col">
+                    <Header />
+                    <div className="p-8">{children}</div>
+                </main>
             </body>
         </html>
     );

@@ -15,14 +15,6 @@
 }
 
 @layer components {
-    .btn-primary {
-        @apply rounded-lg p-3 transition-[color,background-color] duration-fast hover:bg-gray-900 hover:text-white;
-    }
-
-    .btn-primary-active {
-        @apply bg-gray-900 text-white;
-    }
-
     .hover-opacity {
         @apply transition-[opacity] duration-fast hover:opacity-60;
     }

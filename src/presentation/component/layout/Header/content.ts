@@ -1,60 +1,60 @@
 import { IconType } from 'react-icons';
 import { TbSearch, TbSettings, TbBell } from 'react-icons/tb';
 import {
-    DASHBOARD,
     DICTIONARY,
     HOME,
     NOTIFICATIONS,
+    OVERVIEW,
+    PROFILE,
     SEARCH,
-    SETTINGS,
     STUDY,
     TASKS,
 } from 'constant/route';
 
 type NavItemT = {
+    href: string;
     title: string;
-    url: string;
 };
 
 export const NAV: NavItemT[] = [
     {
+        href: HOME,
         title: 'Home',
-        url: HOME,
     },
     {
+        href: OVERVIEW,
         title: 'Dashboard',
-        url: DASHBOARD,
     },
     {
+        href: TASKS,
         title: 'Tasks',
-        url: TASKS,
     },
     {
+        href: STUDY,
         title: 'Study',
-        url: STUDY,
     },
     {
+        href: DICTIONARY,
         title: 'Dictionary',
-        url: DICTIONARY,
     },
 ];
 
 type UserNavItemT = {
+    href: string;
     icon: IconType;
-    url: string;
 };
 
 export const USER_NAV: UserNavItemT[] = [
     {
+        href: SEARCH,
         icon: TbSearch,
-        url: SEARCH,
     },
     {
+        href: PROFILE,
         icon: TbSettings,
-        url: SETTINGS,
     },
     {
+        href: NOTIFICATIONS,
         icon: TbBell,
-        url: NOTIFICATIONS,
     },
 ];
