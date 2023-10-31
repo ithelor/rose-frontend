@@ -1,11 +1,10 @@
 'use client';
 
 import { FC, Fragment, PropsWithChildren } from 'react';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import clsx from 'clsx';
 import Icon from 'presentation/component/common/block/Icon';
 import CircleImage from 'presentation/component/common/block/CircleImage';
+import Link from 'presentation/component/common/typography/Link';
 import Logo from './Logo';
 import { NAV, USER_NAV } from './content';
 
@@ -18,14 +17,13 @@ const Header: FC<PropsWithChildren> = () => {
                 <Logo />
                 <nav>
                     <ul className="grid grid-flow-col items-center gap-x-2">
-                        {NAV.map(({ title, url }) => (
-                            <Fragment key={url}>
+                        {NAV.map(({ href, title }) => (
+                            <Fragment key={href}>
                                 <li className="grid grid-flow-col items-center gap-x-4">
                                     <Link
-                                        href={url}
-                                        className={clsx('btn-primary', {
-                                            'btn-primary-active': url === pathname,
-                                        })}
+                                        href={href}
+                                        variant={href === pathname ? 'primaryActive' : 'primary'}
+                                        className="font-medium"
                                     >
                                         {title}
                                     </Link>
@@ -35,13 +33,23 @@ const Header: FC<PropsWithChildren> = () => {
                     </ul>
                 </nav>
             </div>
-            <div className="grid grid-flow-col items-center gap-x-6">
-                {USER_NAV.map(({ url, icon }) => (
-                    <a key={url} href={url} className="hover-opacity">
+            <div className="grid grid-flow-col items-center gap-x-2">
+                {USER_NAV.map(({ href, icon }) => (
+                    <Link
+                        key={href}
+                        href={href}
+                        variant={href === pathname ? 'secondaryActive' : 'secondary'}
+                        className="font-medium"
+                    >
                         <Icon icon={icon} />
-                    </a>
+                    </Link>
                 ))}
-                <CircleImage alt="" src="https://via.assets.so/img.jpg?w=48&h=48" size={48} />
+                <CircleImage
+                    alt=""
+                    src="https://via.assets.so/img.jpg?w=48&h=48"
+                    size={48}
+                    className="ml-2"
+                />
             </div>
         </header>
     );

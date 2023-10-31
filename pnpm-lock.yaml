@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@tw-classed/react':
+    specifier: ^1.6.1
+    version: 1.6.1(react@18.2.0)
   '@types/node':
     specifier: 18.15.11
     version: 18.15.11
@@ -302,6 +305,19 @@ packages:
     resolution: {integrity: sha512-E4KcWTpoLHqwPHLxidpOqQbcrZVgi0rsmmZXUle1jXmJfuIf/UWpczUJ7MZZ5tlxytgJXyp0w4PGkkeLiuIdZw==}
     dependencies:
       tslib: 2.6.2
+    dev: false
+
+  /@tw-classed/core@1.6.0:
+    resolution: {integrity: sha512-gmg05K1kfubxHcf39l3G4MV+psMj1EpV99w2sjuvskuJj8pl7Q1MRWRFsi0wCoiwuOe+9GzVk74/Eg3zytr1UQ==}
+    dev: false
+
+  /@tw-classed/react@1.6.1(react@18.2.0):
+    resolution: {integrity: sha512-FlzBcJXQv6r6kGG4aLbXSF9wkbagvBq5eHNo4xCk2lPkybeo4oReBMhDG6D4jiPYAbe2OtuuoYViuj0al9lQQQ==}
+    peerDependencies:
+      react: '>=16.8.0'
+    dependencies:
+      '@tw-classed/core': 1.6.0
+      react: 18.2.0
     dev: false
 
   /@types/json-schema@7.0.14:
