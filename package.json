@@ -10,7 +10,9 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "next lint",
+        "storybook:dev": "storybook dev -p 6006 --no-open",
+        "storybook:build": "storybook build"
     },
     "dependencies": {
         "@tw-classed/react": "^1.6.1",
@@ -18,30 +20,44 @@
         "@types/react": "18.0.32",
         "@types/react-dom": "18.0.11",
         "clsx": "^2.0.0",
-        "eslint-config-next": "^13.4.19",
         "next": "^13.4.19",
         "polished": "^4.2.2",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-icons": "^4.10.1",
+        "tailwindcss": "^3.3.5",
         "typescript": "5.0.3"
     },
     "devDependencies": {
         "@next/eslint-plugin-next": "^13.3.0",
+        "@storybook/addon-essentials": "^7.5.2",
+        "@storybook/addon-interactions": "^7.5.2",
+        "@storybook/addon-links": "^7.5.2",
+        "@storybook/addon-onboarding": "^1.0.8",
+        "@storybook/addon-styling-webpack": "^0.0.5",
+        "@storybook/blocks": "^7.5.2",
+        "@storybook/nextjs": "^7.5.2",
+        "@storybook/react": "^7.5.2",
+        "@storybook/testing-library": "^0.2.2",
         "@typescript-eslint/eslint-plugin": "^5.57.1",
         "@typescript-eslint/parser": "^5.57.1",
         "autoprefixer": "^10.4.15",
+        "css-loader": "^6.8.1",
         "eslint": "^8.38.0",
         "eslint-config-airbnb": "^19.0.4",
         "eslint-config-airbnb-typescript": "^17.0.0",
+        "eslint-config-next": "^13.5.6",
         "eslint-config-prettier": "^8.8.0",
         "eslint-import-resolver-typescript": "^3.5.5",
         "eslint-plugin-import": "^2.27.5",
         "eslint-plugin-jsx-a11y": "^6.7.1",
         "eslint-plugin-react": "^7.32.2",
+        "eslint-plugin-storybook": "^0.6.15",
         "postcss": "^8.4.29",
+        "postcss-loader": "^7.3.3",
         "prettier": "^3.0.3",
-        "prettier-plugin-tailwindcss": "^0.5.4",
-        "tailwindcss": "^3.3.3"
+        "prettier-plugin-tailwindcss": "^0.5.6",
+        "storybook": "^7.5.2",
+        "style-loader": "^3.3.3"
     }
 }
