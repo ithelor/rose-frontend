@@ -1,4 +1,5 @@
 {
+    "ignorePatterns": ["prettier.config.js"],
     "extends": [
         "airbnb",
         "airbnb-typescript",
@@ -65,8 +66,16 @@
                     "index" // import main from './'
                 ],
                 "pathGroups": [
-                    { "pattern": "constant/**", "group": "type", "position": "before" },
-                    { "pattern": "domain/entity/**", "group": "type", "position": "before" },
+                    {
+                        "pattern": "constant/**",
+                        "group": "type",
+                        "position": "before"
+                    },
+                    {
+                        "pattern": "domain/entity/**",
+                        "group": "type",
+                        "position": "before"
+                    },
                     {
                         "pattern": "presentation/context/**",
                         "group": "internal",
@@ -102,7 +111,11 @@
                         "group": "internal",
                         "position": "after"
                     },
-                    { "pattern": "./content", "group": "sibling", "position": "after" }
+                    {
+                        "pattern": "./content",
+                        "group": "sibling",
+                        "position": "after"
+                    }
                 ]
             }
         ],
