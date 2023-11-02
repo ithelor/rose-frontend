@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import clsx from 'clsx';
 import { IconBaseProps, IconType } from 'react-icons';
 
 type IconPropsT = IconBaseProps &
@@ -12,7 +13,7 @@ const Icon: FC<IconPropsT> = (props) => {
     return (
         <IconComponent
             size={24}
-            className={`duration-fast transition-fill ${className ?? ''}`}
+            className={clsx('transition-fill duration-fast', className)}
             {...restProps}
         />
     );
