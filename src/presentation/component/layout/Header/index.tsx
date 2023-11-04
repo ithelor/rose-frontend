@@ -12,7 +12,7 @@ const Header: FC<PropsWithChildren> = () => {
     const pathname = usePathname();
 
     return (
-        <header className="sticky top-0 z-fixed flex w-full items-center justify-between border-b  bg-none px-16 py-4 backdrop-blur">
+        <header className="sticky top-0 z-fixed flex w-full items-center justify-between border-b bg-white/95 bg-none px-16 py-4 backdrop-blur">
             <div className="grid grid-flow-col items-center gap-x-8">
                 <Logo />
                 <nav>
