@@ -115,6 +115,11 @@
                         "pattern": "./content",
                         "group": "sibling",
                         "position": "after"
+                    },
+                    {
+                        "pattern": "./styles",
+                        "group": "sibling",
+                        "position": "after"
                     }
                 ]
             }
