@@ -15,10 +15,6 @@
 }
 
 @layer components {
-    .hover-opacity {
-        @apply transition-[opacity] duration-fast hover:opacity-60;
-    }
-
     .pseudo-cover {
         @apply after:absolute after:inset-0 after:content-[''];
     }

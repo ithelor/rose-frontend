@@ -1,6 +1,5 @@
 import { PropsWithChildren } from 'react';
 import { Montserrat } from 'next/font/google';
-import Background from 'presentation/component/layout/Background';
 import Header from 'presentation/component/layout/Header';
 import './globals.css';
 
@@ -17,7 +16,6 @@ export default function RootLayout(props: PropsWithChildren) {
     return (
         <html lang="en" className={montserrat.className}>
             <body>
-                <Background />
                 <main className="relative flex min-h-screen flex-col">
                     <Header />
                     <div className="h-full flex-1 p-8">{children}</div>
