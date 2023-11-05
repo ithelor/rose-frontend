@@ -14,14 +14,7 @@ const config = {
             bold: '700',
         },
         colors: {
-            black: {
-                100: '#1c1c1c',
-                80: '#494949',
-                40: '#a4a4a4',
-                20: '#d2d2d2',
-                10: '#e9e9e9',
-                5: '#f3f3f3',
-            },
+            black: '#1c1c1c',
             white: '#fff',
             primary: {
                 blue: '#e3f5ff',
