@@ -13,6 +13,7 @@ const Icon: FC<PropsT> = (props) => {
     return (
         <IconComponent
             size={24}
+            weight="duotone"
             className={clsx(
                 'transition duration-fast [&_path[opacity="0.2"]]:opacity-10',
                 className,

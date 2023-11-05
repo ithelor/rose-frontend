@@ -21,12 +21,12 @@ const Button: FC<PropsT> = (props) => {
     } = props;
 
     return (
-        <BaseButton size={size} color={color} {...restProps}>
-            {startAdornment && (
-                <Icon icon={startAdornment} weight="duotone" position="left" size={size} />
-            )}
+        <BaseButton type="button" size={size} color={color} {...restProps}>
+            {startAdornment && <Icon icon={startAdornment} position="left" size={size} />}
             {children}
-            {endAdornment && <Icon icon={endAdornment} position="right" size={size} />}
+            {endAdornment && (
+                <Icon icon={endAdornment} weight="regular" position="right" size={size} />
+            )}
         </BaseButton>
     );
 };
