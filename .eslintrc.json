@@ -12,7 +12,7 @@
         "node": true
     },
     "parser": "@typescript-eslint/parser",
-    "plugins": ["@typescript-eslint", "import", "jsx-a11y", "react"],
+    "plugins": ["@typescript-eslint", "import", "jsx-a11y", "react", "no-relative-import-paths"],
     "parserOptions": {
         "project": "./tsconfig.json",
         "tsconfigRootDir": ".",
@@ -149,6 +149,11 @@
                 "explicitSpread": "enforce",
                 "exceptions": []
             }
+        ],
+        "import/no-relative-parent-imports": "off",
+        "no-relative-import-paths/no-relative-import-paths": [
+            "error",
+            { "allowSameFolder": true, "rootDir": "src" }
         ],
         "react/react-in-jsx-scope": "off",
         "react/prop-types": "off",
