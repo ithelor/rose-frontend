@@ -1,20 +1,17 @@
 import { FC, PropsWithChildren } from 'react';
-import NextLink, { LinkProps as NextLinkProps } from 'next/link';
-import { ClassNameProp } from 'presentation/type/styles';
+import { LinkProps as NextLinkProps } from 'next/link';
+import { VariantProps } from '@tw-classed/react';
+import { BaseLink } from './styles';
 
-type LinkPropsT = Omit<NextLinkProps, 'as'> & ClassNameProp & PropsWithChildren;
+type LinkPropsT = Omit<NextLinkProps, 'as'> &
+    VariantProps<typeof BaseLink> &
+    PropsWithChildren &
+    ClassName;
 
 const Link: FC<LinkPropsT> = (props) => {
     const { children, ...restProps } = props;
 
-    return (
-        <NextLink
-            className="text-black/40 transition duration-fast hover:text-black"
-            {...restProps}
-        >
-            {children}
-        </NextLink>
-    );
+    return <BaseLink {...restProps}>{children}</BaseLink>;
 };
 
 export default Link;
