@@ -12,11 +12,13 @@ export const BaseButton = classed(
                 large: 'rounded-2xl px-6 py-4 text-lg',
             },
             color: {
-                primary: 'bg-black fill-white/10 text-white hover:bg-black/80 disabled:bg-black/5',
-                secondary: 'bg-black/5 hover:enabled:bg-black/10 disabled:bg-black/5',
+                primary:
+                    // TODO: btn-interactive plugin
+                    'bg-black fill-white/10 text-white [&:hover:not([disabled])]:bg-black/80 disabled:bg-black/5',
+                secondary: 'bg-black/5 [&:hover:not([disabled])]:bg-black/10 disabled:bg-black/5',
                 outline:
-                    'border border-black/10 hover:enabled:border-black/20 hover:enabled:bg-black/5',
-                text: 'hover:enabled:bg-black/5',
+                    'border border-black/10 [&:hover:not([disabled])]:border-black/20 [&:hover:not([disabled])]:bg-black/5',
+                text: '[&:hover:not([disabled])]:bg-black/5',
             },
         },
         defaultVariants: {

@@ -3,14 +3,15 @@ import { VariantProps } from '@tw-classed/react';
 import { Icon as IconType } from '@phosphor-icons/react';
 import { BaseButton, Icon } from './styles';
 
-type PropsT = Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'color'> &
-    VariantProps<typeof BaseButton> &
+export type BaseButtonPropsT = VariantProps<typeof BaseButton> &
     PropsWithChildren & {
         startAdornment?: IconType;
         endAdornment?: IconType;
     };
 
-const Button: FC<PropsT> = (props) => {
+type ButtonPropsT = BaseButtonPropsT & Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'color'>;
+
+const Button: FC<ButtonPropsT> = (props) => {
     const {
         children,
         startAdornment,
@@ -30,5 +31,7 @@ const Button: FC<PropsT> = (props) => {
         </BaseButton>
     );
 };
+
+export { BaseButton };
 
 export default Button;
