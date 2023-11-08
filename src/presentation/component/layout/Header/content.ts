@@ -1,33 +1,22 @@
-import { IconType } from 'react-icons';
-import { TbSearch, TbSettings, TbBell } from 'react-icons/tb';
-import {
-    DICTIONARY,
-    HOME,
-    NOTIFICATIONS,
-    OVERVIEW,
-    PROFILE,
-    SEARCH,
-    STUDY,
-    TASKS,
-} from 'constant/route';
+import { DICTIONARY, HOME, NEWS, OVERVIEW, STUDY } from 'constant/route';
 
 type NavItemT = {
     href: string;
     title: string;
 };
 
-export const NAV: NavItemT[] = [
+export const NAV_ITEMS: NavItemT[] = [
     {
         href: HOME,
         title: 'Home',
     },
     {
-        href: OVERVIEW,
-        title: 'Dashboard',
+        href: NEWS,
+        title: 'News',
     },
     {
-        href: TASKS,
-        title: 'Tasks',
+        href: OVERVIEW,
+        title: 'Dashboard',
     },
     {
         href: STUDY,
@@ -36,25 +25,5 @@ export const NAV: NavItemT[] = [
     {
         href: DICTIONARY,
         title: 'Dictionary',
-    },
-];
-
-type UserNavItemT = {
-    href: string;
-    icon: IconType;
-};
-
-export const USER_NAV: UserNavItemT[] = [
-    {
-        href: SEARCH,
-        icon: TbSearch,
-    },
-    {
-        href: PROFILE,
-        icon: TbSettings,
-    },
-    {
-        href: NOTIFICATIONS,
-        icon: TbBell,
     },
 ];

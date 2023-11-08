@@ -1,36 +1,23 @@
 'use client';
 
 import { FC } from 'react';
-import { usePathname, useSelectedLayoutSegments } from 'next/navigation';
-import Link from 'presentation/component/common/typography/Link';
-import { MAP_PAGE_TO_SIDEBAR_CONTENT } from './content';
+import Logo from 'presentation/component/layout/common/Logo';
+import Account from './Account';
+import NavSection from './NavSection';
+import { NAV_SECTIONS } from './content';
 
 const Sidebar: FC = () => {
-    const pathname = usePathname();
-    const [baseSegment] = useSelectedLayoutSegments();
-    const content = MAP_PAGE_TO_SIDEBAR_CONTENT[`/${baseSegment}`];
-
-    if (!content) {
-        return null;
-    }
-
     return (
-        <aside className="min-w-[9rem]">
-            <nav>
+        <aside className="flex min-w-[212px] flex-col border-r border-black/10 px-4 py-5">
+            <Account />
+            <nav className="mt-6">
                 <ul className="grid gap-y-2">
-                    {content.map(({ href, label }) => (
-                        <li key={href} className="flex">
-                            <Link
-                                href={href}
-                                variant={pathname === href ? 'secondaryActive' : 'secondary'}
-                                className="w-full font-medium"
-                            >
-                                {label}
-                            </Link>
-                        </li>
+                    {NAV_SECTIONS.map((section) => (
+                        <NavSection key={section.title} data={section} />
                     ))}
                 </ul>
             </nav>
+            <Logo className="mt-auto self-center" />
         </aside>
     );
 };

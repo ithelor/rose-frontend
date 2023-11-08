@@ -1,10 +1,10 @@
 import { PropsWithChildren } from 'react';
-import { Montserrat } from 'next/font/google';
-import Background from 'presentation/component/layout/Background';
-import Header from 'presentation/component/layout/Header';
+import { Inter, Kodchasan } from 'next/font/google';
+import clsx from 'clsx';
 import './globals.css';
 
-const montserrat = Montserrat({ subsets: ['latin'] });
+const kodchasan = Kodchasan({ subsets: ['latin'], variable: '--font-title', weight: ['600'] });
+const inter = Inter({ subsets: ['latin'], variable: '--font-body' });
 
 export const metadata = {
     title: 'Title',
@@ -15,13 +15,9 @@ export default function RootLayout(props: PropsWithChildren) {
     const { children } = props;
 
     return (
-        <html lang="en" className={montserrat.className}>
-            <body>
-                <Background />
-                <main className="relative flex min-h-screen flex-col">
-                    <Header />
-                    <div className="h-full flex-1 p-8">{children}</div>
-                </main>
+        <html lang="en">
+            <body className={clsx('font-body', kodchasan.variable, inter.variable)}>
+                <main className="relative flex min-h-screen flex-col">{children}</main>
             </body>
         </html>
     );

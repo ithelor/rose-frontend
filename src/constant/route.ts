@@ -1,20 +1,28 @@
 export const HOME = '/';
+export const NEWS = '/news';
 export const DASHBOARD = '/dashboard';
-export const DICTIONARY = '/dictionary';
-export const NOTIFICATIONS = '/notifications';
-export const SEARCH = '/search';
-export const SETTINGS = '/settings';
 export const STUDY = '/study';
-export const TASKS = '/tasks';
+export const SETTINGS = '/settings';
+
+export const SIGN_UP = '/sign-up';
+export const SIGN_IN = '/sign-in';
 
 /**
- * Dashboard sidebar sections
+ * Dashboard sidebar items
  */
 export const OVERVIEW = `${DASHBOARD}/overview`;
 export const STATISTICS = `${DASHBOARD}/statistics`;
 
 /**
- * Settings sidebar sections
+ * Study sidebar items
+ */
+export const KANJI = `${DASHBOARD}/kanji`;
+export const VOCABULARY = `${DASHBOARD}/vocabulary`;
+export const DICTIONARY = `${DASHBOARD}/dictionary`;
+
+/**
+ * Settings sidebar items
  */
 export const PROFILE = `${SETTINGS}/profile`;
+export const SECURITY = `${SETTINGS}/security`;
 export const ADVANCED = `${SETTINGS}/advanced`;

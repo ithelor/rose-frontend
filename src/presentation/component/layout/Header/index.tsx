@@ -1,55 +1,35 @@
 'use client';
 
-import { FC, Fragment, PropsWithChildren } from 'react';
+import { FC } from 'react';
 import { usePathname } from 'next/navigation';
-import Icon from 'presentation/component/common/block/Icon';
-import CircleImage from 'presentation/component/common/block/CircleImage';
+import { SIGN_IN, SIGN_UP } from 'constant/route';
+import Logo from 'presentation/component/layout/common/Logo';
 import Link from 'presentation/component/common/typography/Link';
-import Logo from './Logo';
-import { NAV, USER_NAV } from './content';
+import ButtonLink from 'presentation/component/common/typography/ButtonLink';
+import { NAV_ITEMS } from './content';
 
-const Header: FC<PropsWithChildren> = () => {
+const Header: FC = () => {
     const pathname = usePathname();
 
     return (
-        <header className="sticky top-0 z-fixed flex w-full items-center justify-between border-b bg-white/95 bg-none px-16 py-4 backdrop-blur">
-            <div className="grid grid-flow-col items-center gap-x-8">
-                <Logo />
-                <nav>
-                    <ul className="grid grid-flow-col items-center gap-x-2">
-                        {NAV.map(({ href, title }) => (
-                            <Fragment key={href}>
-                                <li className="grid grid-flow-col items-center gap-x-4">
-                                    <Link
-                                        href={href}
-                                        variant={href === pathname ? 'primaryActive' : 'primary'}
-                                        className="font-medium"
-                                    >
-                                        {title}
-                                    </Link>
-                                </li>
-                            </Fragment>
-                        ))}
-                    </ul>
-                </nav>
-            </div>
-            <div className="grid grid-flow-col items-center gap-x-2">
-                {USER_NAV.map(({ href, icon }) => (
-                    <Link
-                        key={href}
-                        href={href}
-                        variant={href === pathname ? 'secondaryActive' : 'secondary'}
-                        className="font-medium"
-                    >
-                        <Icon icon={icon} />
-                    </Link>
-                ))}
-                <CircleImage
-                    alt=""
-                    src="https://via.assets.so/img.jpg?w=48&h=48"
-                    size={48}
-                    className="ml-2"
-                />
+        <header className="flex items-center justify-between px-7 py-4">
+            <Logo />
+            <nav>
+                <ul className="grid grid-flow-col gap-x-6">
+                    {NAV_ITEMS.map(({ href, title }) => (
+                        <li key={href}>
+                            <Link href={href} color={pathname === href ? 'primary' : 'neutral'}>
+                                {title}
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            </nav>
+            <div className="grid grid-flow-col gap-x-2">
+                <ButtonLink href={SIGN_UP} color="outline">
+                    Sign up
+                </ButtonLink>
+                <ButtonLink href={SIGN_IN}>Sign in</ButtonLink>
             </div>
         </header>
     );

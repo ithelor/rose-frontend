@@ -1,19 +1,23 @@
 import { FC } from 'react';
+import { IconProps, Icon as IconType } from '@phosphor-icons/react';
 import clsx from 'clsx';
-import { IconBaseProps, IconType } from 'react-icons';
 
-type IconPropsT = IconBaseProps &
+type PropsT = IconProps &
     ClassName & {
         icon: IconType;
     };
 
-const Icon: FC<IconPropsT> = (props) => {
-    const { icon: IconComponent, className, ...restProps } = props;
+const Icon: FC<PropsT> = (props) => {
+    const { icon: IconComponent, weight = 'duotone', className, ...restProps } = props;
 
     return (
         <IconComponent
             size={24}
-            className={clsx('transition-fill duration-fast', className)}
+            weight={weight}
+            className={clsx(
+                'transition duration-fast [&_path[opacity="0.2"]]:opacity-10',
+                className,
+            )}
             {...restProps}
         />
     );
