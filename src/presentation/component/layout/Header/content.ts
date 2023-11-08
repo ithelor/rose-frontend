@@ -1,4 +1,4 @@
-import { DICTIONARY, HOME, OVERVIEW, STUDY } from 'constant/route';
+import { DICTIONARY, HOME, NEWS, OVERVIEW, STUDY } from 'constant/route';
 
 type NavItemT = {
     href: string;
@@ -9,6 +9,10 @@ export const NAV_ITEMS: NavItemT[] = [
     {
         href: HOME,
         title: 'Home',
+    },
+    {
+        href: NEWS,
+        title: 'News',
     },
     {
         href: OVERVIEW,

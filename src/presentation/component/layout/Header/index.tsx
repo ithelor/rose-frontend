@@ -3,9 +3,9 @@
 import { FC } from 'react';
 import { usePathname } from 'next/navigation';
 import { SIGN_IN, SIGN_UP } from 'constant/route';
+import Logo from 'presentation/component/layout/common/Logo';
 import Link from 'presentation/component/common/typography/Link';
 import ButtonLink from 'presentation/component/common/typography/ButtonLink';
-import Logo from './Logo';
 import { NAV_ITEMS } from './content';
 
 const Header: FC = () => {

@@ -8,12 +8,12 @@ type PropsT = IconProps &
     };
 
 const Icon: FC<PropsT> = (props) => {
-    const { icon: IconComponent, className, ...restProps } = props;
+    const { icon: IconComponent, weight = 'duotone', className, ...restProps } = props;
 
     return (
         <IconComponent
             size={24}
-            weight="duotone"
+            weight={weight}
             className={clsx(
                 'transition duration-fast [&_path[opacity="0.2"]]:opacity-10',
                 className,
