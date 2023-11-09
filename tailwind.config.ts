@@ -33,6 +33,7 @@ const config = {
                 orange: '#ffcb83',
                 red: '#ff4747',
             },
+            transparent: 'transparent',
         },
         transitionDuration: {
             slow: 'var(--transition-slow)',
