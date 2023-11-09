@@ -1,4 +1,5 @@
 import type { Decorator, Meta, StoryFn, StoryObj } from '@storybook/react';
+import avatar from 'presentation/image/account/avatar.jpg';
 import CircleImage from './index';
 
 const LayoutDecorator: Decorator = (Story: StoryFn) => (
@@ -21,7 +22,7 @@ type Story = StoryObj<typeof CircleImage>;
 export const Default: Story = {
     args: {
         alt: '',
-        src: 'https://via.assets.so/img.jpg?w=48&h=48',
+        src: avatar.src,
         size: 48,
     },
 };

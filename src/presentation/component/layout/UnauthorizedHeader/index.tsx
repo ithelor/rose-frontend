@@ -8,7 +8,7 @@ import Link from 'presentation/component/common/typography/Link';
 import ButtonLink from 'presentation/component/common/typography/ButtonLink';
 import { NAV_ITEMS } from './content';
 
-const Header: FC = () => {
+const UnauthorizedHeader: FC = () => {
     const pathname = usePathname();
 
     return (
@@ -35,4 +35,4 @@ const Header: FC = () => {
     );
 };
 
-export default Header;
+export default UnauthorizedHeader;
