@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react';
 import Sidebar from 'presentation/component/layout/Sidebar';
-import AuthorizedHeader from 'presentation/component/layout/Sidebar/AuthorizedHeader';
+import AuthorizedHeader from 'presentation/component/layout/AuthorizedHeader';
 
 export default function AuthorizedLayout(props: PropsWithChildren) {
     const { children } = props;

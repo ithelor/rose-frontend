@@ -1,12 +1,15 @@
 import { FC } from 'react';
-import avatar from 'presentation/image/account/avatar.jpg';
+import useUserStore from 'domain/store/user/useUserStore';
 import CircleImage from 'presentation/component/common/block/CircleImage';
 
 const Account: FC = () => {
+    const user = useUserStore((state) => state.user);
+    const { avatar, name } = user;
+
     return (
         <div className="grid auto-cols-max grid-flow-col items-center gap-x-2">
-            <CircleImage alt="" src={avatar.src} size={24} />
-            <span>Username</span>
+            <CircleImage alt="" src={avatar} size={24} />
+            <span>{name}</span>
         </div>
     );
 };
