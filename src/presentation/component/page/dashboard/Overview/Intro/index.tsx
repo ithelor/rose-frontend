@@ -2,7 +2,7 @@
 
 import { FC } from 'react';
 import { EnvelopeSimple, GraduationCap, MapPin } from '@phosphor-icons/react';
-import useUserStore from 'domain/store/User/useUserStore';
+import useUserStore from 'domain/store/user/useUserStore';
 import SurfaceCard from 'presentation/component/common/block/SurfaceCard';
 import CircleImage from 'presentation/component/common/block/CircleImage';
 import Detail from './Detail';

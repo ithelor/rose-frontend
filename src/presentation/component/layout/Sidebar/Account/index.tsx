@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import useUserStore from 'domain/store/User/useUserStore';
+import useUserStore from 'domain/store/user/useUserStore';
 import CircleImage from 'presentation/component/common/block/CircleImage';
 
 const Account: FC = () => {
