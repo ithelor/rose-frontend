@@ -1,7 +1,12 @@
 import { FC } from 'react';
+import Intro from './Intro';
 
 const Overview: FC = () => {
-    return <div>Overview</div>;
+    return (
+        <div>
+            <Intro />
+        </div>
+    );
 };
 
 export default Overview;
