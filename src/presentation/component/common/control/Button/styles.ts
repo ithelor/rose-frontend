@@ -7,7 +7,7 @@ export const BaseButton = classed(
     {
         variants: {
             size: {
-                small: 'rounded-lg px-2 py-1 text-sm',
+                small: 'rounded-lg px-2 py-1',
                 medium: 'rounded-xl px-4 py-2 text-lg',
                 large: 'rounded-2xl px-6 py-4 text-lg',
             },
@@ -35,9 +35,9 @@ export const Icon = classed(BaseIcon, {
             right: '',
         },
         size: {
-            small: 'h-4 w-4',
-            medium: 'h-5 w-5',
-            large: 'h-6 w-6',
+            small: 'h-5 w-5',
+            medium: 'h-6 w-6',
+            large: 'h-7 w-7',
         },
     },
     compoundVariants: [

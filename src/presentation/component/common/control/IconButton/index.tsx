@@ -14,7 +14,7 @@ const IconButton: FC<PropsT> = (props) => {
 
     return (
         <BaseButton type="button" color={color}>
-            <Icon icon={icon} size={20} {...iconProps} />
+            <Icon icon={icon} size={24} {...iconProps} />
         </BaseButton>
     );
 };

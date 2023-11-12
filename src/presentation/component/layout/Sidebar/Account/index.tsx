@@ -8,7 +8,7 @@ const Account: FC = () => {
 
     return (
         <div className="grid auto-cols-max grid-flow-col items-center gap-x-2">
-            <CircleImage alt="" src={avatar} size={24} />
+            <CircleImage alt="" src={avatar} size={28} />
             <span>{name}</span>
         </div>
     );

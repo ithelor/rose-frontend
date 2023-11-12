@@ -15,7 +15,7 @@ export const Button = classed(
 
 export const Link = classed(
     BaseLink,
-    'relative w-full rounded-lg px-2 py-1 pl-[50px] transition duration-fast hover:bg-black/5',
+    'relative w-full rounded-lg px-2 py-1 pl-[58px] transition duration-fast hover:bg-black/5',
     {
         variants: {
             active: {
