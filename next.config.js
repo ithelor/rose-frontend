@@ -1,12 +1,19 @@
-const MOCK_IMAGE_DOMAINS = ['via.assets.so'];
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: [...MOCK_IMAGE_DOMAINS, process.env.NEXT_PUBLIC_DOMAIN],
+        domains: [process.env.NEXT_PUBLIC_DOMAIN],
     },
     experimental: {
         appDir: true,
+    },
+    webpack(config) {
+        config.module.rules.push({
+            test: /\.svg$/i,
+            issuer: /\.[jt]sx?$/,
+            use: ['@svgr/webpack'],
+        });
+
+        return config;
     },
 };
 
