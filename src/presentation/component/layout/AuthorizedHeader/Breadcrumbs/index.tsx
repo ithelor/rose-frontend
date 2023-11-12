@@ -19,7 +19,7 @@ const Breadcrumbs: FC = () => {
 
                     return (
                         <Fragment key={fullPath}>
-                            <li className="peer peer-[&]:pl-4 peer-[&]:before:pr-4 peer-[&]:before:text-black/40 peer-[&]:before:content-['/']">
+                            <li className="peer peer-[&]:before:px-2 peer-[&]:before:text-black/40 peer-[&]:before:content-['/']">
                                 {!isActive && <Link href={fullPath}>{label}</Link>}
                                 {isActive && <span>{label}</span>}
                             </li>

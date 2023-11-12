@@ -38,12 +38,12 @@ const NavSection: FC<PropsT> = (props) => {
                 <Icon
                     icon={CaretRight}
                     weight="regular"
-                    size={16}
+                    size={20}
                     className={clsx('fill-black/20 transition duration-fast', {
                         'rotate-90': isOpen,
                     })}
                 />
-                <Icon icon={icon} size={20} />
+                <Icon icon={icon} size={24} />
                 <span>{title}</span>
             </Button>
             <ul

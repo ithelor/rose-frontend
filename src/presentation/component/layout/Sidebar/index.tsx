@@ -8,7 +8,7 @@ import { NAV_SECTIONS } from './content';
 
 const Sidebar: FC = () => {
     return (
-        <aside className="flex min-w-[212px] flex-col border-r border-black/10 px-4 py-5">
+        <aside className="flex min-w-[240px] flex-col border-r border-black/10 px-4 py-5">
             <Account />
             <nav className="mt-6">
                 <ul className="grid gap-y-2">
