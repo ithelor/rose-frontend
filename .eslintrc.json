@@ -141,15 +141,7 @@
         "no-underscore-dangle": "off",
         "consistent-return": "off",
         "react/state-in-constructor": ["error", "never"],
-        "react/jsx-props-no-spreading": [
-            "error",
-            {
-                "html": "enforce",
-                "custom": "ignore",
-                "explicitSpread": "enforce",
-                "exceptions": []
-            }
-        ],
+        "react/jsx-props-no-spreading": "off",
         "import/no-relative-parent-imports": "off",
         "no-relative-import-paths/no-relative-import-paths": [
             "error",
