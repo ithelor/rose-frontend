@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import { Icon as IconType } from '@phosphor-icons/react';
 import Icon from 'presentation/component/common/block/Icon';
 
 type DetailProps = {

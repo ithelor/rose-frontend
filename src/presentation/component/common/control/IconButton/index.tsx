@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { IconProps, Icon as IconType } from '@phosphor-icons/react';
+import { IconProps } from '@phosphor-icons/react';
 import { VariantProps } from '@tw-classed/react';
 import Icon from 'presentation/component/common/block/Icon';
 import { BaseButton } from './styles';

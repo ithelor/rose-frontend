@@ -1,6 +1,5 @@
 import { ButtonHTMLAttributes, FC, PropsWithChildren } from 'react';
 import { VariantProps } from '@tw-classed/react';
-import { Icon as IconType } from '@phosphor-icons/react';
 import { BaseButton, Icon } from './styles';
 
 export type BaseButtonPropsT = VariantProps<typeof BaseButton> &

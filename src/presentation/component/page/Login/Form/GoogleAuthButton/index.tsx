@@ -1,12 +1,12 @@
 import { FC, useEffect, useState } from 'react';
 import { TokenResponse, useGoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
-import { GoogleLogo } from '@phosphor-icons/react';
 import { useRouter } from 'next/navigation';
 import { OVERVIEW } from 'constant/route';
 import User from 'domain/entity/User';
 import useUserStore from 'domain/store/user/useUserStore';
 import { MOCK_USER } from 'domain/store/user/mock';
+import GoogleIcon from 'presentation/svg/google.svg';
 import Button from 'presentation/component/common/control/Button';
 
 type AuthResponse = Omit<TokenResponse, 'error' | 'error_description' | 'error_uri'>;
@@ -57,7 +57,13 @@ const GoogleAuthButton: FC = () => {
     }, [authResponse]);
 
     return (
-        <Button color="outline" size="medium" startAdornment={GoogleLogo} onClick={() => login()}>
+        <Button
+            color="outline"
+            size="medium"
+            startAdornment={GoogleIcon}
+            className="bg-white [&:hover:not([disabled])]:bg-white/80"
+            onClick={() => login()}
+        >
             Sign in with Google
         </Button>
     );
