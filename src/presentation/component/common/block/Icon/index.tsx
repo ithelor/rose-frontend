@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { IconProps, Icon as IconType } from '@phosphor-icons/react';
+import { IconProps } from '@phosphor-icons/react';
 import clsx from 'clsx';
 
 type PropsT = IconProps &

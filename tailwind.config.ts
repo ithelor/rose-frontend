@@ -51,6 +51,21 @@ const config = {
             tooltip: '1080',
             blockingFadeLoader: '100000',
         },
+        keyframes: {
+            'fade-in': {
+                '0%': { opacity: '0', visibility: 'hidden' },
+                '1%': { visibility: 'visible' },
+                '100%': { opacity: '1' },
+            },
+            'fade-out': {
+                '0%': { opacity: '1', visibility: 'visible' },
+                '100%': { opacity: '0', visibility: 'hidden' },
+            },
+        },
+        animation: {
+            'fade-in': 'fade-in 3s forwards',
+            'fade-out': 'fade-out 3s forwards',
+        },
         extend: {},
     },
     plugins: [],

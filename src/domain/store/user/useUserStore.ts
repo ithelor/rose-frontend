@@ -5,12 +5,14 @@ import { MOCK_USER } from './mock';
 
 type UserState = {
     user: User;
+    setUser: (user: User) => void;
 };
 
 const useUserStore = create<UserState>()(
     devtools(
-        () => ({
+        (set) => ({
             user: MOCK_USER,
+            setUser: (user) => set(() => ({ user })),
         }),
         { name: 'user-storage' },
     ),

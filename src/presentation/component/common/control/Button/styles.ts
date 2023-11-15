@@ -3,7 +3,7 @@ import BaseIcon from 'presentation/component/common/block/Icon';
 
 export const BaseButton = classed(
     'button',
-    'flex items-center fill-black/10 transition duration-fast disabled:cursor-not-allowed disabled:text-black/10',
+    'flex items-center fill-black/10 transition duration-fast disabled:cursor-not-allowed disabled:text-black/10 justify-center',
     {
         variants: {
             size: {
@@ -19,6 +19,7 @@ export const BaseButton = classed(
                 outline:
                     'border border-black/10 [&:hover:not([disabled])]:border-black/20 [&:hover:not([disabled])]:bg-black/5',
                 text: '[&:hover:not([disabled])]:bg-black/5',
+                link: 'text-secondary-indigo',
             },
         },
         defaultVariants: {

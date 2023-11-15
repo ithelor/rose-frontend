@@ -8,3 +8,4 @@ declare namespace Time {
 
 declare type HTMLString = string;
 declare type ClassName = Pick<React.HTMLAttributes<HTMLElement>, 'className'>;
+declare type IconType = FC<SVGProps<SVGSVGElement>>;

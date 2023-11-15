@@ -2,7 +2,7 @@
 
 import { FC, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { CaretRight, Icon as IconType } from '@phosphor-icons/react';
+import { CaretRight } from '@phosphor-icons/react';
 import clsx from 'clsx';
 import Icon from 'presentation/component/common/block/Icon';
 import { Button, Link } from './styles';
