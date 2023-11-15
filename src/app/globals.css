@@ -8,6 +8,7 @@
         @apply text-black;
         @apply bg-white;
 
+        --container-gutter: 80px;
         --transition-fast: 200ms;
         --transition-normal: 400ms;
         --transition-slow: 700ms;

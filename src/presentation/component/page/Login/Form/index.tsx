@@ -2,14 +2,15 @@
 
 import { FC } from 'react';
 import Button from 'presentation/component/common/control/Button';
+import { Container } from 'presentation/component/common/block/Container';
 import GoogleAuthButton from './GoogleAuthButton';
 import Input from './Input';
 import { Delimiter } from './styles';
 
 const Form: FC = () => {
     return (
-        <div className="mr-20 flex flex-1 items-center justify-end">
-            <form className="relative grid w-[460px] auto-cols-fr items-center justify-center gap-y-7 rounded-3xl bg-white/80 p-10 backdrop-blur-xl">
+        <Container className="relative flex flex-1 items-center justify-end">
+            <form className="grid w-[460px] auto-cols-fr items-center justify-center gap-y-7 rounded-3xl bg-white/80 p-10 backdrop-blur-xl">
                 <div className="grid gap-y-2 text-center">
                     <span className="text-2xl font-semiBold">Sign In</span>
                     <span className="text-sm text-black/40">Your Social Campaigns</span>
@@ -38,7 +39,7 @@ const Form: FC = () => {
                     <Button color="link">Sign Up</Button>
                 </div>
             </form>
-        </div>
+        </Container>
     );
 };
 
