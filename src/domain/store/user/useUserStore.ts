@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { devtools } from 'zustand/middleware';
+import { devtools, persist } from 'zustand/middleware';
 import User from 'domain/entity/User';
 import { MOCK_USER } from './mock';
 
@@ -10,11 +10,13 @@ type UserState = {
 
 const useUserStore = create<UserState>()(
     devtools(
-        (set) => ({
-            user: MOCK_USER,
-            setUser: (user) => set(() => ({ user })),
-        }),
-        { name: 'user-storage' },
+        persist(
+            (set) => ({
+                user: MOCK_USER,
+                setUser: (user) => set(() => ({ user })),
+            }),
+            { name: 'user-storage' },
+        ),
     ),
 );
 

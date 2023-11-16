@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react';
 import { Inter, Kodchasan } from 'next/font/google';
 import clsx from 'clsx';
-import GoogleOAuthProvider from './providers/GoogleOAuthProvider';
+import AuthProvider from './providers/AuthProvider';
 import './globals.css';
 
 const kodchasan = Kodchasan({ subsets: ['latin'], variable: '--font-title', weight: ['600'] });
@@ -18,9 +18,9 @@ export default function RootLayout(props: PropsWithChildren) {
     return (
         <html lang="en">
             <body className={clsx('font-body', kodchasan.variable, inter.variable)}>
-                <GoogleOAuthProvider>
+                <AuthProvider>
                     <main className="relative flex min-h-screen flex-col">{children}</main>
-                </GoogleOAuthProvider>
+                </AuthProvider>
             </body>
         </html>
     );

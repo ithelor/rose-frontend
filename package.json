@@ -25,7 +25,6 @@
     },
     "dependencies": {
         "@phosphor-icons/react": "^2.0.14",
-        "@react-oauth/google": "^0.11.1",
         "@tw-classed/react": "^1.6.1",
         "@types/node": "18.15.11",
         "@types/react": "18.0.32",
@@ -33,6 +32,7 @@
         "axios": "^1.6.1",
         "clsx": "^2.0.0",
         "next": "13.4.19",
+        "next-auth": "^4.24.5",
         "polished": "^4.2.2",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
