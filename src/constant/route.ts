@@ -26,3 +26,10 @@ export const DICTIONARY = `${DASHBOARD}/dictionary`;
 export const PROFILE = `${SETTINGS}/profile`;
 export const SECURITY = `${SETTINGS}/security`;
 export const ADVANCED = `${SETTINGS}/advanced`;
+
+/**
+ * API routes
+ */
+const USER = (url: string) => `/user/${url}`;
+export const USER_LOGIN = USER('login');
+export const GET_USER = USER('');
