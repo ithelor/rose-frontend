@@ -1,8 +1,12 @@
+'use client';
+
 import { PropsWithChildren } from 'react';
+import RoleEnum from 'domain/entity/RoleEnum';
 import Sidebar from 'presentation/component/layout/Sidebar';
 import AuthorizedHeader from 'presentation/component/layout/AuthorizedHeader';
+import createAuthorizedLayout from 'presentation/component/layout/AuthorizedLayout';
 
-export default function AuthorizedLayout(props: PropsWithChildren) {
+const BaseAuthorizedLayout = (props: PropsWithChildren) => {
     const { children } = props;
 
     return (
@@ -14,4 +18,8 @@ export default function AuthorizedLayout(props: PropsWithChildren) {
             </div>
         </div>
     );
-}
+};
+
+export default createAuthorizedLayout(BaseAuthorizedLayout, {
+    roles: [RoleEnum.User],
+});

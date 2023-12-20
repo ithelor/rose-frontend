@@ -1,11 +1,14 @@
+import RoleEnum from './RoleEnum';
+
 export default class User {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     public static Hydrate(data: any): User {
         try {
             return new User(
-                data.id ?? NaN,
+                data.id ?? '',
                 data.name ?? '',
                 data.avatar ?? '',
+                data.visitor ?? [RoleEnum.Visitor],
                 data.lvl ?? '',
                 data.location ?? '',
                 data.email ?? '',
@@ -19,13 +22,14 @@ export default class User {
     }
 
     public static CreateEmpty(): User {
-        return new User(NaN, '', '', '', '', '', NaN, NaN, NaN);
+        return new User('', '', '', [RoleEnum.Visitor], '', '', '', NaN, NaN, NaN);
     }
 
     constructor(
-        public readonly id: number,
+        public readonly id: string,
         public readonly name: string,
         public readonly avatar: string,
+        public readonly roles: RoleEnum[],
         public readonly lvl: string,
         public readonly location: string,
         public readonly email: string,
