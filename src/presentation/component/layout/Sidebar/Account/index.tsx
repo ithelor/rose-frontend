@@ -1,10 +1,9 @@
 import { FC } from 'react';
-import useUserStore from 'domain/store/user/useUserStore';
+import { MOCK_USER } from 'domain/store/user/mock';
 import CircleImage from 'presentation/component/common/block/CircleImage';
 
 const Account: FC = () => {
-    const user = useUserStore((state) => state.user);
-    const { avatar, name } = user;
+    const { avatar, name } = MOCK_USER;
 
     return (
         <div className="grid auto-cols-max grid-flow-col items-center gap-x-2">

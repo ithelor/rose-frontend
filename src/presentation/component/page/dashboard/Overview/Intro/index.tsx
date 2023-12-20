@@ -3,6 +3,7 @@
 import { FC } from 'react';
 import { EnvelopeSimple, GraduationCap, MapPin } from '@phosphor-icons/react';
 import useUserStore from 'domain/store/user/useUserStore';
+import { MOCK_USER } from 'domain/store/user/mock';
 import SurfaceCard from 'presentation/component/common/block/SurfaceCard';
 import CircleImage from 'presentation/component/common/block/CircleImage';
 import Detail from './Detail';
@@ -11,7 +12,8 @@ import ProgressBar from './ProgressBar';
 
 const Intro: FC = () => {
     const user = useUserStore((state) => state.user);
-    const { name, avatar, lvl, location, email, todayReviews, totalReviews, successRate } = user;
+    const { email } = user;
+    const { name, avatar, lvl, location, todayReviews, totalReviews, successRate } = MOCK_USER;
 
     return (
         <SurfaceCard className="grid gap-y-5">

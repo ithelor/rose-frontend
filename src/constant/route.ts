@@ -1,11 +1,11 @@
+export const SIGN_UP = '/sign-up';
+export const SIGN_IN = '/sign-in';
+
 export const HOME = '/';
 export const NEWS = '/news';
 export const DASHBOARD = '/dashboard';
 export const STUDY = '/study';
 export const SETTINGS = '/settings';
-
-export const SIGN_UP = '/sign-up';
-export const SIGN_IN = '/sign-in';
 
 /**
  * Dashboard sidebar items
@@ -31,5 +31,6 @@ export const ADVANCED = `${SETTINGS}/advanced`;
  * API routes
  */
 const USER = (url: string) => `/user/${url}`;
-export const USER_LOGIN = USER('login');
 export const GET_USER = USER('');
+export const USER_LOGIN = USER('login');
+export const USER_REFRESH = USER('refresh');

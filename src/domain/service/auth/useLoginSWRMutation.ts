@@ -20,13 +20,16 @@ const useLoginSWRMutation = () => {
     return {
         ...restProps,
         trigger: async (loginPayload: LoginPayload) => {
-            const { data } = await trigger(loginPayload);
-            const { token } = data;
-            frontendApiClient.setAccessToken(token);
+            const loginResponse = await trigger(loginPayload);
+            const { headers } = loginResponse;
+            const { authorization } = headers;
+            frontendApiClient.setAccessToken(authorization);
             const { data: user } = await frontendApiClient.rest.get<User>(GET_USER);
 
             if (user) {
-                return setUser(user);
+                setUser(user);
+
+                return;
             }
 
             frontendApiClient.setAccessToken(undefined);

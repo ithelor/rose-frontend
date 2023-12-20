@@ -4,7 +4,7 @@ import { FC } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useRouter } from 'next/navigation';
-import { DASHBOARD } from 'constant/route';
+import { OVERVIEW } from 'constant/route';
 import { LoginForm } from 'data/driver/validation/auth/types';
 import { loginFormValidationSchema } from 'data/driver/validation/auth/schema';
 import useLoginSWRMutation from 'domain/service/auth/useLoginSWRMutation';
@@ -30,11 +30,8 @@ const Form: FC = () => {
                 password,
             });
 
-            router.push(DASHBOARD);
-        } catch (e) {
-            // eslint-disable-next-line no-console
-            console.log(e);
-        }
+            router.push(OVERVIEW);
+        } catch (e) {}
     };
 
     return (
